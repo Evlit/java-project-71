@@ -19,8 +19,9 @@ public class App implements Callable<String> {
     String filepath2;
 
     @Override
-    public String call() throws Exception { // your business logic goes here...
-        System.out.println(Differ.generate(filepath1, filepath2));
+    public String call() throws Exception {
+        String differ = Differ.generate(filepath1, filepath2);
+        System.out.println(differ);
         return null;
     }
 
