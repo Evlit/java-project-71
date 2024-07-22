@@ -8,4 +8,4 @@
 <a href="https://codeclimate.com/github/Evlit/java-project-71/test_coverage"><img src="https://api.codeclimate.com/v1/badges/34bdb06d58fb1c7cdc57/test_coverage" /></a>
 
 ### Project asciinemas:
-[![asciicast](https://asciinema.org/a/jjgBp4BTh6N50bbcVRguuuYTY.svg)](https://asciinema.org/a/jjgBp4BTh6N50bbcVRguuuYTY)
+[![asciicast](https://asciinema.org/a/669223.svg)](https://asciinema.org/a/669223)

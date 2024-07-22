@@ -16,19 +16,23 @@ import java.util.TreeSet;
 import java.util.LinkedHashMap;
 
 public class Differ {
-    public static String generate(String filepath1, String filepath2) throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
+    public static String generate(String filepath1, String filepath2, String format) throws IOException {
+
         Path path1 = Paths.get(filepath1);
         Path path2 = Paths.get(filepath2);
         String file1 = Files.readString(path1);
         String file2 = Files.readString(path2);
 
-        Map<String, Object> map1
-                = objectMapper.readValue(file1, new TypeReference<Map<String, Object>>() { });
-        Map<String, Object> map2
-                = objectMapper.readValue(file2, new TypeReference<Map<String, Object>>() { });
-        Map<String, Object> sortedMap1 = new TreeMap<>(map1);
-        Map<String, Object> sortedMap2 = new TreeMap<>(map2);
+        Map<String, Object> sortedMap1 = Parser.parseFile(file1, format);
+        Map<String, Object> sortedMap2 = Parser.parseFile(file2, format);
+
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        Map<String, Object> map1
+//                = objectMapper.readValue(file1, new TypeReference<Map<String, Object>>() { });
+//        Map<String, Object> map2
+//                = objectMapper.readValue(file2, new TypeReference<Map<String, Object>>() { });
+//        Map<String, Object> sortedMap1 = new TreeMap<>(map1);
+//        Map<String, Object> sortedMap2 = new TreeMap<>(map2);
 
         var keys = new TreeSet<>();
         keys.addAll(sortedMap1.keySet());
