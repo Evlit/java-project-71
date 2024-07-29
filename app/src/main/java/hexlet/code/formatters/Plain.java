@@ -22,7 +22,7 @@ public class Plain {
                 result += "Property '" + diff.get("key").toString() + "' was removed\n";
             }
         }
-        return result;
+        return result.substring(0, result.length() - 1);
     }
 
     public static String typeOfValue(Object value) {
