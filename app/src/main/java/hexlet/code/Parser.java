@@ -17,7 +17,7 @@ public class Parser {
                         = objectMapperJson.readValue(file, new TypeReference<Map<String, Object>>() { });
                 Map<String, Object> sortedJson = new TreeMap<>(mapjson);
                 return sortedJson;
-            case "yaml":
+            case "yaml", "yml":
                 ObjectMapper objectMapperYml = new ObjectMapper(new YAMLFactory());
                 Map<String, Object> mapyml = objectMapperYml.readValue(file, Map.class);
                 Map<String, Object> sortedYml = new TreeMap<>(mapyml);
