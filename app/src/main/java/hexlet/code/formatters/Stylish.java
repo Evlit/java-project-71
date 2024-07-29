@@ -1,7 +1,5 @@
 package hexlet.code.formatters;
 
-//import java.io.FileWriter;
-//import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -23,18 +21,6 @@ public class Stylish {
                 result += "- " + diff.get("key").toString() + ": " + diff.get("oldvalue") + "\n";
             }
         }
-//        System.out.println(result1);
-//        ObjectMapper objectMapper2 = new ObjectMapper();
-//        System.out.println(objectMapper2.writerWithDefaultPrettyPrinter().writeValueAsString(result1));
-//        return objectMapper2.writerWithDefaultPrettyPrinter().writeValueAsString(result1);
-//        Path path = Paths.get("src/test/resources/result.txt");
-//        var actual = Files.readString(path);
-//        System.out.println(actual);
-//        FileWriter writer = new FileWriter("src/test/resources/ymlstlyshresult.txt", false);
-//
-//        writer.write(result + "}\n");
-//        writer.close();
-
         return result + "}\n";
     }
 }

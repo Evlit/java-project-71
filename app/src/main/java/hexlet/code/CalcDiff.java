@@ -12,7 +12,6 @@ public class CalcDiff {
         var keys = new TreeSet<>();
         keys.addAll(sortedMap1.keySet());
         keys.addAll(sortedMap2.keySet());
-//        String result = "{\n";
         List<Map<String, Object>> result = new ArrayList<>();
         for (var key : keys) {
             Map<String, Object> line = new LinkedHashMap<>();
@@ -25,8 +24,6 @@ public class CalcDiff {
                     line.put("type", "changed");
                     line.put("oldvalue", sortedMap1.get(key.toString()));
                     line.put("newvalue", sortedMap2.get(key.toString()));
-//                    result += "- " + key + ": " + sortedMap1.get(key.toString()) + "\n";
-//                    result += "+ " + key + ": " + sortedMap2.get(key.toString()) + "\n";
                 }
             }
             if (!sortedMap1.containsKey(key) && sortedMap2.containsKey(key)) {
@@ -39,19 +36,6 @@ public class CalcDiff {
             }
             result.add(line);
         }
-//        System.out.println(result1);
-//        ObjectMapper objectMapper2 = new ObjectMapper();
-//        System.out.println(objectMapper2.writerWithDefaultPrettyPrinter().writeValueAsString(result1));
-//        return objectMapper2.writerWithDefaultPrettyPrinter().writeValueAsString(result1);
-//        Path path = Paths.get("src/test/resources/result.txt");
-//        var actual = Files.readString(path);
-//        System.out.println(actual);
-//        FileWriter writer = new FileWriter("src/test/resources/fileresult.txt", false);
-//
-//        writer.write(result + "}\n");
-//        writer.close();
-
-//        return result + "}\n";
         return result;
     }
 }

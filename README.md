@@ -1,3 +1,9 @@
+### **Проект №2 "Вычислитель отличий"**
+
+Консольная утилита, показывающая разницу двух сравниваемых файлов.
+Поддерживается сравнение файлов в форматах json или yaml.
+Результат сравнения выводится на экран. Форматы вывода - json, text plain или stylish - указываются  ключем -f.
+Примеры запуска в разных вариантах представлены в аскинеме ниже.
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Evlit/java-project-71/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Evlit/java-project-71/actions)
 
@@ -8,4 +14,4 @@
 <a href="https://codeclimate.com/github/Evlit/java-project-71/test_coverage"><img src="https://api.codeclimate.com/v1/badges/34bdb06d58fb1c7cdc57/test_coverage" /></a>
 
 ### Project asciinemas:
-[![asciicast](https://asciinema.org/a/669223.svg)](https://asciinema.org/a/669223)
+[![asciicast](https://asciinema.org/a/670006.svg)](https://asciinema.org/a/670006)

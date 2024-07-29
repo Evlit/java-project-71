@@ -1,7 +1,5 @@
 package hexlet.code.formatters;
 
-//import java.io.FileWriter;
-//import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -24,18 +22,6 @@ public class Plain {
                 result += "Property '" + diff.get("key").toString() + "' was removed\n";
             }
         }
-//        System.out.println(result1);
-//        ObjectMapper objectMapper2 = new ObjectMapper();
-//        System.out.println(objectMapper2.writerWithDefaultPrettyPrinter().writeValueAsString(result1));
-//        return objectMapper2.writerWithDefaultPrettyPrinter().writeValueAsString(result1);
-//        Path path = Paths.get("src/test/resources/result.txt");
-//        var actual = Files.readString(path);
-//        System.out.println(actual);
-//        FileWriter writer = new FileWriter("src/test/resources/Plainresult2.txt", false);
-//
-//        writer.write(result);
-//        writer.close();
-
         return result;
     }
 
