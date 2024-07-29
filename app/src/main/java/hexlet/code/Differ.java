@@ -85,7 +85,7 @@ public class Differ {
 //*********************************
 
 //        return result + "}\n";
-        System.out.println(format);
+//        System.out.println(format);
         List<Map<String, Object>> different = CalcDiff.getDiff(sortedMap1, sortedMap2);
         return Formatter.diffResult(different, format);
     }
