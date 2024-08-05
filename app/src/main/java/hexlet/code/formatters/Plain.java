@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 public class Plain {
     public static String getPlain(List<Map<String, Object>> different) {
@@ -26,16 +25,12 @@ public class Plain {
     }
 
     public static String typeOfValue(Object value) {
-        String returnValue = "";
         if (value instanceof ArrayList<?> || value instanceof LinkedHashMap<?, ?>) {
-            returnValue = "[complex value]";
-        } else if (Objects.isNull(value)) {
-            returnValue = "null";
+            return  "[complex value]";
         } else if (value instanceof String) {
-            returnValue = "'" + value + "'";
+            return  "'" + value + "'";
         } else {
-            returnValue = value.toString();
+            return String.valueOf(value);
         }
-        return returnValue;
     }
 }
