@@ -1,11 +1,15 @@
 package hexlet.code;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -68,12 +72,23 @@ class DifferTest {
     @Test
     void testJsonJson() throws IOException {
         var result6 = Differ.generate(JASONFILE1, JASONFILE2, "json");
-        assertEquals(result6, jasonResult);
+        ObjectMapper objectmapper = new ObjectMapper();
+        List<Map<String, Object>> mapJson
+                = objectmapper.readValue(result6, new TypeReference<>() { });
+        List<Map<String, Object>> actualJson
+                = objectmapper.readValue(jasonResult, new TypeReference<>() { });
+        assertEquals(mapJson, actualJson);
     }
 
     @Test
     void testYamlJson() throws IOException {
         var result7 = Differ.generate(YAMLFILE1, YAMLFILE2, "json");
+        ObjectMapper objectmapper = new ObjectMapper();
+        List<Map<String, Object>> mapYaml
+                = objectmapper.readValue(result7, new TypeReference<>() { });
+        List<Map<String, Object>> actualYaml
+                = objectmapper.readValue(jasonResult, new TypeReference<>() { });
+        assertEquals(mapYaml, actualYaml);
         assertEquals(result7, jasonResult);
     }
 }

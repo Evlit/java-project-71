@@ -1,4 +1,4 @@
-{
+[ {
   "key" : "chars1",
   "type" : "unchanged",
   "value" : [ "a", "b", "c" ]
@@ -69,4 +69,4 @@
   "type" : "changed",
   "oldvalue" : true,
   "newvalue" : "none"
-}
+} ]
