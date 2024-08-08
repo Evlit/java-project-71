@@ -12,7 +12,7 @@ public class Parser {
             case "json":
                 ObjectMapper objectMapperJson = new ObjectMapper();
                 Map<String, Object> mapJson
-                        = objectMapperJson.readValue(file, new TypeReference<Map<String, Object>>() { });
+                        = objectMapperJson.readValue(file, new TypeReference<>() { });
                 return mapJson;
             case "yaml", "yml":
                 ObjectMapper objectMapperYml = new ObjectMapper(new YAMLFactory());

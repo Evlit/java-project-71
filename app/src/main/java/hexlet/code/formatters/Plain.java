@@ -14,11 +14,11 @@ public class Plain {
         for (var diff : different) {
             String key = diff.get("key").toString();
             if (diff.get("type").toString().equals("changed")) {
-                result += String.format(changed, key, typeOfValue(diff.get("oldvalue")),
-                        typeOfValue(diff.get("newvalue")));
+                result += String.format(changed, key, typeOfValue(diff.get("value1")),
+                        typeOfValue(diff.get("value2")));
             }
             if (diff.get("type").toString().equals("added")) {
-                result += String.format(added, key, typeOfValue(diff.get("newvalue")));
+                result += String.format(added, key, typeOfValue(diff.get("value2")));
             }
             if (diff.get("type").toString().equals("deleted")) {
                 result += String.format(deleted, key);

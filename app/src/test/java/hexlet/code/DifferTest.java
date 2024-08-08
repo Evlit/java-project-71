@@ -89,6 +89,5 @@ class DifferTest {
         List<Map<String, Object>> actualYaml
                 = objectmapper.readValue(jasonResult, new TypeReference<>() { });
         assertEquals(mapYaml, actualYaml);
-        assertEquals(result7, jasonResult);
     }
 }

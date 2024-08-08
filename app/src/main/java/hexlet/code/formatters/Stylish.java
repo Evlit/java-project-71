@@ -13,14 +13,14 @@ public class Stylish {
                     result += "    " + diff.get("key").toString() + ": " + diff.get("value") + "\n";
                     break;
                 case "changed":
-                    result += "  - " + diff.get("key").toString() + ": " + diff.get("oldvalue") + "\n";
-                    result += "  + " + diff.get("key").toString() + ": " + diff.get("newvalue") + "\n";
+                    result += "  - " + diff.get("key").toString() + ": " + diff.get("value1") + "\n";
+                    result += "  + " + diff.get("key").toString() + ": " + diff.get("value2") + "\n";
                     break;
                 case "added":
-                    result += "  + " + diff.get("key").toString() + ": " + diff.get("newvalue") + "\n";
+                    result += "  + " + diff.get("key").toString() + ": " + diff.get("value2") + "\n";
                     break;
                 case "deleted":
-                    result += "  - " + diff.get("key").toString() + ": " + diff.get("oldvalue") + "\n";
+                    result += "  - " + diff.get("key").toString() + ": " + diff.get("value1") + "\n";
                     break;
                 default:
                     break;

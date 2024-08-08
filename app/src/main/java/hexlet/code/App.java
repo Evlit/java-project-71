@@ -26,7 +26,7 @@ public final class App implements Callable<Integer> {
             System.out.println(differ);
             return 0;
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             return 1;
         }
     }
